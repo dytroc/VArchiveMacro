@@ -45,7 +45,7 @@ jobs:
       - name: Upload release
         uses: softprops/action-gh-release@v2.6.1
         with:
-          files: macro/build/distributions/VArchive\ Macro-v${{ env.VERSION }}.zip
-          tag_name: ${{ env.VERSION }}
+          files: ./macro/build/distributions/VArchive\ Macro-${{ env.VERSION }}.zip
+          tag_name: v${{ env.VERSION }}
 
       
