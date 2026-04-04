@@ -6,3 +6,5 @@ build
 
 # Ignore IntelliJ IDEA files
 .idea
+
+macro/extra/version

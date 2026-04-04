@@ -94,9 +94,16 @@ tasks.jpackageImage.get().doLast {
         from("data")
         into("$jPackageImageDir/data")
     }
+
+    file("extra/version").writeText("#!/bin/sh\necho $version")
+
+    copy {
+        from("extra")
+        into("$jPackageImageDir")
+    }
 }
 
-tasks.register<Zip>("release") {
+tasks.register<Tar>("release") {
     description = "Creates an archive file to release."
     group = "distribution"
 
@@ -104,10 +111,15 @@ tasks.register<Zip>("release") {
 
     isRelease = true
 
+    compression = Compression.GZIP
+    archiveExtension.set("tar.gz")
+
     archiveBaseName = appName
     archiveVersion = version.toString()
 
     val jPackageData = jlink.jpackageData.get()
-    from("${jPackageData.imageOutputDir}/${jPackageData.imageName}")
-    into("$appName v$version")
+    from("${jPackageData.imageOutputDir}/${jPackageData.imageName}") {
+        into("$appName v$version")
+        fileMode = 493
+    }
 }
