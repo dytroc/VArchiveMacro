@@ -11,7 +11,7 @@ import java.nio.file.Path;
 public class UpdateCheckContext implements Context {
     // constants
     private final Path PROGRAM_DATA_DIRECTORY_PATH = Path.of("data");
-    private final String GITHUB_OWNER = "johypark97";
+    private final String GITHUB_OWNER = "dytroc";
     private final String GITHUB_REPOSITORY = "VArchiveMacro";
 
     // states
