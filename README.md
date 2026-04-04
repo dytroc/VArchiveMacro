@@ -1,4 +1,4 @@
-# VArchiveMacro
+# VArchiveMacro (x86_Linux ver.)
 
 ![Screenshot](https://github.com/johypark97/VArchiveMacro/blob/main/doc/img/readme.png)
 
