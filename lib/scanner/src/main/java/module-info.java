@@ -10,9 +10,9 @@ module varchivemacro.lib.scanner {
     requires org.xerial.sqlitejdbc;
 
     // tesseract-platform
-    requires org.bytedeco.javacpp.windows.x86_64;
-    requires org.bytedeco.leptonica.windows.x86_64;
-    requires org.bytedeco.tesseract.windows.x86_64;
+    requires org.bytedeco.javacpp.linux.x86_64;
+    requires org.bytedeco.leptonica.linux.x86_64;
+    requires org.bytedeco.tesseract.linux.x86_64;
 
     // exports
     exports com.github.johypark97.varchivemacro.lib.scanner.api;
