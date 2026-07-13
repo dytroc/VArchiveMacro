@@ -41,11 +41,6 @@ public class AwtRobotHelper {
 
     public static void tabKey(Robot robot, long duration, int keyCode, int... modifier)
             throws InterruptedException {
-        if (IS_WAYLAND) {
-            simulateWaylandKey(keyCode, modifier, duration);
-            return;
-        }
-
         boolean interrupted = false;
         Arrays.stream(modifier).forEach(robot::keyPress);
         robot.keyPress(keyCode);
@@ -128,24 +123,5 @@ public class AwtRobotHelper {
             System.err.println("Wayland specific screen capture failed: " + e.getMessage());
         }
         return null;
-    }
-
-    private static void simulateWaylandKey(int javaKeyCode, int[] modifiers, long duration) {
-        try {
-            int linuxKeyCode = switch (javaKeyCode) {
-                case 9 -> 15;    // VK_TAB
-                case 10 -> 28;   // VK_ENTER
-                case 32 -> 57;   // VK_SPACE
-                default -> 0;
-            };
-
-            if (linuxKeyCode == 0) return;
-
-            Runtime.getRuntime().exec(new String[]{"ydotool", "key", linuxKeyCode + ":1"});
-            Thread.sleep(duration);
-            Runtime.getRuntime().exec(new String[]{"ydotool", "key", linuxKeyCode + ":0"});
-        } catch (Exception e) {
-            System.err.println("Wayland key injection failed: " + e.getMessage());
-        }
     }
 }
