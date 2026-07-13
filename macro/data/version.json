@@ -1,10 +1,10 @@
 {
-  "version": "2026-06-28 21:55 +0900",
+  "version": "2026-07-05 18:00 +0900",
   "files": [
     {
       "path": "data/djmax.traineddata",
       "request_path": "macro/data/djmax.traineddata",
-      "hash": "1ec8ef2e5c1a2e65aa86be59693b1175568fe2f0d81d518951abf9fba678a7fd"
+      "hash": "ac7440615ee75c17e5d9f5c92d223b3f6f786c6eebc3035e171347d9671c7998"
     },
     {
       "path": "data/eng.traineddata",
@@ -19,7 +19,7 @@
     {
       "path": "data/titles.json",
       "request_path": "macro/data/titles.json",
-      "hash": "ab26fe274eeb3a166db0362107b11db4b37d2c54e662564510d4285a2d6b996e"
+      "hash": "67d218e75425aa17d12e8748ddef6e0b55f18446c9d6bcda9c556d63ced90969"
     }
   ]
 }
