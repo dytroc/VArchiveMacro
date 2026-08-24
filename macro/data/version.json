@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-22 17:20 +0900",
+  "version": "2026-08-24 23:50 +0900",
   "files": [
     {
       "path": "data/djmax.traineddata",
@@ -19,7 +19,7 @@
     {
       "path": "data/titles.json",
       "request_path": "macro/data/titles.json",
-      "hash": "da28675e48f09cc614be2203ae22ec3d7da0bffac5ef3277edb052d68e3ecf3a"
+      "hash": "bf6e9857c37907a81b96ca86c35d15d2aad397828eec2c53ec3fc2bab750fdf7"
     }
   ]
 }
